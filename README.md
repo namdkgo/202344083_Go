@@ -1,4 +1,4 @@
-This repository contains Go code files, Linux commands, and Git/GitHub commands covered in the Open Source Programming course.
+This repository contains the Go language source code used in Open Source Programming classes in 2023.
 
 
 
