@@ -16,3 +16,10 @@ week02
   git remote -v
   git push -u origin main
 
+
+
+This repository contains the Go language source code used in Open Source Programming classes in 2023.
+
+
+
+
