@@ -15,7 +15,7 @@ func main() {
 	rand.Seed(time.Now().Unix())
 	answerNum := rand.Intn(100) + 1
 	reader := bufio.NewReader(os.Stdin)
-	fmt.Println(answerNum)
+
 	for i := 10; i > 0; i-- {
 		fmt.Println("남은 기회 :", i)
 		fmt.Print("입력 : ")
