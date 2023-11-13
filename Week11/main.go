@@ -1,15 +1,21 @@
+// average calculates the average of several numbers.
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"github.com/headfirstgo/datafile"
+	"log"
+)
 
 func main() {
-	// var primes [3]int
-	// primes[0] = 2
-	// primes[2] = 5
-
-	primes := [3]int{2, 3, 5}
-	primes[2] = 6
-	for i := 0; i < 3; i++ {
-		fmt.Println(primes[i])
+	numbers, err := datafile.GetFloats("data.txt")
+	if err != nil {
+		log.Fatal(err)
 	}
+	var sum float64 = 0
+	for _, number := range numbers {
+		sum += number
+	}
+	sampleCount := float64(len(numbers))
+	fmt.Printf("Average: %0.2f\n", sum/sampleCount)
 }
