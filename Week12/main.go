@@ -3,12 +3,13 @@ package main
 import "fmt"
 
 func main() {
-	a := []string{"a", "b", "c", "d"}
+	a := make([]string, 4, 5)
+	a[0] = "a"
+	a[2] = "c"
+	a[3] = "d"
 	as := a[0:2]
+	fmt.Println(a, len(a), cap(a))
 	as[1] = "z"
-	fmt.Println(as)
-
-	b := [4]int{4, 3, 2, 1}
-	bs := b[1:3]
-	fmt.Println(bs)
+	fmt.Println(a, len(a), cap(a))
+	fmt.Printf("%x %x %x\n", &a[0], &as[0], &a[1])
 }
